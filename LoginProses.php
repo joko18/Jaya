@@ -8,7 +8,7 @@ if(isset($_POST['Login'])){
     $sql= "SELECT * FROM tbl_user where ID_User='$User' and Password='$Pass'";
     $query = mysqli_query($conn,$sql);
     $arrayData = (msqli_fetch_array($query));
-    session_start()
+    session_start();
     $_SESSION['ID'] = $arrayData[' ID_User '];
 
     if ($arrayData[' Jabata '] = "Dosen"){
@@ -17,9 +17,9 @@ if(isset($_POST['Login'])){
 
             header("location=Admin.php");
 
-    }
 
-    
+        }
 }
+    
 
 ?>
