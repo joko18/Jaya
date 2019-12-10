@@ -4,6 +4,7 @@
 <label>
 User    :<input type="text" name="user">
 Password:<input type="text" name="pass">
+coba
 <label>
 <input type="submit" name="Login" values="Login">
 <body>
