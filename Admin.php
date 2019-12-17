@@ -12,24 +12,31 @@ INNER JOIN tbl_prodi ON ID_Matakuliah=ID_Prodi");
 </head>
 
 <body>
-
-    <table class="table">
-
-    <tr>
-       <th>Nama Mahasiswa</th> <th>NIM</th> <th>Nama Prodi</th> <th>Jurusan</th><th>Email</h><th>Info</th>
-    </tr>
-    <?php  
-    while($user_data = mysqli_fetch_array($result)) {         
-        echo "<tr>";
-		echo "<td>".$user_data['Nama_Mahasiswa']."</td>";
-		echo "<td>".$user_data['NIM']."</td>";
-        echo "<td>".$user_data['Nama_Prodi']."</td>";
-        echo "<td>".$user_data['Jurusan']."</td>";
-        echo "<td>".$user_data['Email']."</td>"; 
-        echo "<td><a href='edit.php?id=$user_data[NIM]'>Update</a> | <a href='delete.php?id=$user_data[NIM]'>Delete</a></td></tr>";        
-    } 
-    ?>
+<br>
+<br>
+<a href="Input.php?" class="btn btn-primary btn-lg">Input Data Maha sisiwa</a>
+<br>
+<br>
+    <table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+        <th>Nama Mahasiswa</th> <th>NIM</th> <th>Nama Prodi</th> <th>Jurusan</th><th>Email</h><th>Info</th>
+        </tr>
+    </thead>
+        <?php  
+        while($user_data = mysqli_fetch_array($result)) {         
+            echo "<tr>";
+		    echo "<td>".$user_data['Nama_Mahasiswa']."</td>";
+		    echo "<td>".$user_data['NIM']."</td>";
+            echo "<td>".$user_data['Nama_Prodi']."</td>";
+            echo "<td>".$user_data['Jurusan']."</td>";
+            echo "<td>".$user_data['Email']."</td>"; 
+            echo "<td><a href='Edit.php?id=$user_data[NIM]'class='btn btn-warning btn-sm'>Update</a> 
+             <a href='Delete.php? id=$user_data[NIM]' class='btn btn-danger btn-sm' >Delete</a></td></tr>";        
+        } 
+        ?>
 	
     </table>
 </body>
 </html>
+
