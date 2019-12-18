@@ -1,5 +1,5 @@
 <?php
-include "Conection1.php";
+include "Conection.php";
 $result = mysqli_query($conn, "SELECT Nama_Mahasiswa,NIM,Nama_Prodi,Jurusan,Email FROM tbl_admin
 INNER JOIN tbl_prodi ON ID_Matakuliah=ID_Prodi");
 ?>
